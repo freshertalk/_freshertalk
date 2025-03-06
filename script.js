@@ -17,13 +17,22 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
     const href = this.getAttribute("href");
-    if (href === "#placement-details" || href === "#csr-details") {
+    if (href === "#placement-details" || href.includes("csr-")) {
       document.querySelector(href).style.display = "block";
       window.scrollTo({
         top: document.querySelector(href).offsetTop - 50,
         behavior: "smooth",
       });
-    } else if (window.innerWidth <= 768) {
+    } else {
+      const targetSection = document.querySelector(href);
+      if (targetSection) {
+        window.scrollTo({
+          top: targetSection.offsetTop - 50,
+          behavior: "smooth",
+        });
+      }
+    }
+    if (window.innerWidth <= 768) {
       navLinks.classList.remove("active");
       hamburger.innerHTML = '<i class="fas fa-bars"></i>';
     }
@@ -84,6 +93,32 @@ document.querySelectorAll(".know-more").forEach((button) => {
   });
 });
 
+// CSR Explore More Functionality
+document.querySelectorAll(".explore-more").forEach((button) => {
+  button.addEventListener("click", () => {
+    const target = button.getAttribute("data-target");
+    document.querySelector(`#${target}`).style.display = "block";
+    window.scrollTo({
+      top: document.querySelector(`#${target}`).offsetTop - 50,
+      behavior: "smooth",
+    });
+  });
+});
+
+// Image Enlargement Functionality
+document.querySelectorAll(".clickable-image").forEach((img) => {
+  img.addEventListener("click", () => {
+    const isEnlarged = img.classList.contains("enlarged");
+    document
+      .querySelectorAll(".clickable-image")
+      .forEach((i) => i.classList.remove("enlarged"));
+    if (!isEnlarged) {
+      img.classList.add("enlarged");
+    }
+  });
+});
+
+// Back Button Functionality
 document.querySelectorAll(".back-btn").forEach((button) => {
   button.addEventListener("click", () => {
     const section = button.closest("section");
@@ -92,8 +127,9 @@ document.querySelectorAll(".back-btn").forEach((button) => {
       duration: 0.5,
       onComplete: () => (section.style.display = "none"),
     });
+    const href = button.getAttribute("href");
     window.scrollTo({
-      top: document.querySelector("#placement").offsetTop - 50,
+      top: document.querySelector(href).offsetTop - 50,
       behavior: "smooth",
     });
   });

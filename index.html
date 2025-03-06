@@ -10,7 +10,6 @@
         content="IT training, internships, CSR activity, job placement, FresherTalk Digital Solutions, digital solutions, career development">
     <title>FresherTalk Digital Solutions</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- Using Poppins as per second image -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -21,21 +20,21 @@
     <header>
         <nav class="container">
             <div class="logo">
-                <img src="logo.png" alt="FresherTalk Digital Solutions Logo"
+                <img src="https://via.placeholder.com/40x40?text=FDS" alt="FresherTalk Digital Solutions Logo"
                     class="logo-img">
                 <span>FresherTalk Digital Solutions</span>
             </div>
             <ul id="nav-links">
-                <li><a href="#home" target="_blank">Home</a></li>
-                <li><a href="#about" target="_blank">About Us</a></li>
-                <li><a href="#training" target="_blank">Training</a></li>
-                <li><a href="#internship" target="_blank">Internship</a></li>
-                <li><a href="#placement" target="_blank">Placement</a></li>
-                <li><a href="#csr" target="_blank">CSR Activity</a></li>
-                <li><a href="#success" target="_blank">Success Stories</a></li>
-                <li><a href="#certificate" target="_blank">Certificate</a></li>
-                <li><a href="#faq" target="_blank">FAQ</a></li>
-                <li><a href="#contact" target="_blank">Contact</a></li>
+                <li><a href="#home" target="_blank" class="nav-link">Home</a></li>
+                <li><a href="#about" target="_blank" class="nav-link">About Us</a></li>
+                <li><a href="#training" target="_blank" class="nav-link">Training</a></li>
+                <li><a href="#internship" target="_blank" class="nav-link">Internship</a></li>
+                <li><a href="#placement" target="_blank" class="nav-link">Placement</a></li>
+                <li><a href="#csr" target="_blank" class="nav-link">CSR Activity</a></li>
+                <li><a href="#success" target="_blank" class="nav-link">Success Stories</a></li>
+                <li><a href="#certificate" target="_blank" class="nav-link">Certificate</a></li>
+                <li><a href="#faq" target="_blank" class="nav-link">FAQ</a></li>
+                <li><a href="#contact" target="_blank" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
                 <i class="fas fa-bars"></i>
@@ -52,7 +51,7 @@
                         alt="Tech Training">
                     <div class="slide-content">
                         <h2>Training Programs</h2>
-                        <a href="#training" class="btn">Learn More</a>
+                        <a href="#training" class="btn" target="_blank">Learn More</a>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -60,7 +59,7 @@
                         alt="Coding">
                     <div class="slide-content">
                         <h2>Internship Opportunities</h2>
-                        <a href="#internship" class="btn">Explore Now</a>
+                        <a href="#internship" class="btn" target="_blank">Explore Now</a>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -68,7 +67,7 @@
                         alt="Placement">
                     <div class="slide-content">
                         <h2>Placement Support</h2>
-                        <a href="#placement" class="btn">Get Started</a>
+                        <a href="#placement" class="btn" target="_blank">Get Started</a>
                     </div>
                 </div>
             </div>
@@ -128,7 +127,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Additional Courses -->
                 <div class="course-card">
                     <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
                         alt="Java Development">
@@ -203,7 +201,7 @@
         </div>
     </section>
 
-    <!-- Placement Details Section (Hidden, Opens on Click) -->
+    <!-- Placement Details Section -->
     <section id="placement-details" class="section animate-section" style="display: none;">
         <div class="container">
             <h2>Placement Support Details</h2>
@@ -220,12 +218,6 @@
                     <h3>Interview Preparation</h3>
                     <p>Mock interviews, aptitude tests, and HR training with personalized feedback.</p>
                 </div>
-                <div class="placement-detail-card">
-                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
-                        alt="Job Fair">
-                    <h3>Job Fairs</h3>
-                    <p>Access to campus and off-campus recruitment drives with top IT companies.</p>
-                </div>
             </div>
             <a href="#placement" class="btn back-btn">Back</a>
         </div>
@@ -236,31 +228,59 @@
         <div class="container">
             <h2>CSR Activity</h2>
             <p>Our initiatives focus on community empowerment:</p>
-            <ul class="feature-list">
-                <li>Free IT workshops for underprivileged youth.</li>
-                <li>Partnerships with NGOs.</li>
-            </ul>
-            <a href="#csr-details" class="btn" target="_blank">Get Started</a>
+            <div class="csr-grid">
+                <div class="csr-card">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                        alt="IT Workshop">
+                    <h3>Free IT Workshops</h3>
+                    <button class="btn explore-more" data-target="csr-workshop">Explore More</button>
+                </div>
+                <div class="csr-card">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                        alt="NGO Partnership">
+                    <h3>NGO Partnerships</h3>
+                    <button class="btn explore-more" data-target="csr-ngo">Explore More</button>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- CSR Details Section (Hidden, Opens on Click) -->
-    <section id="csr-details" class="section animate-section" style="display: none;">
+    <!-- CSR Workshop Details -->
+    <section id="csr-workshop" class="section animate-section csr-details" style="display: none;">
         <div class="container">
-            <h2>CSR Activity Details</h2>
-            <div class="csr-detail-grid">
-                <div class="csr-detail-card">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
-                        alt="Workshop">
-                    <h3>Free IT Workshops</h3>
-                    <p>Providing free training to underprivileged youth to bridge the digital divide.</p>
-                </div>
-                <div class="csr-detail-card">
-                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
-                        alt="NGO">
-                    <h3>NGO Partnerships</h3>
-                    <p>Collaborating with local NGOs to enhance tech education outreach.</p>
-                </div>
+            <h2>Free IT Workshops</h2>
+            <p><strong>Date:</strong> March 01, 2025</p>
+            <p><strong>Description:</strong> Providing free IT training to underprivileged youth to bridge the digital
+                divide.</p>
+            <div class="csr-image-large">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Workshop Large">
+            </div>
+            <div class="csr-image-grid">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                    alt="Workshop 1" class="clickable-image">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                    alt="Workshop 2" class="clickable-image">
+            </div>
+            <a href="#csr" class="btn back-btn">Back</a>
+        </div>
+    </section>
+
+    <!-- CSR NGO Details -->
+    <section id="csr-ngo" class="section animate-section csr-details" style="display: none;">
+        <div class="container">
+            <h2>NGO Partnerships</h2>
+            <p><strong>Date:</strong> February 15, 2025</p>
+            <p><strong>Description:</strong> Collaborating with local NGOs to enhance tech education outreach.</p>
+            <div class="csr-image-large">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="NGO Large">
+            </div>
+            <div class="csr-image-grid">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                    alt="NGO 1" class="clickable-image">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                    alt="NGO 2" class="clickable-image">
             </div>
             <a href="#csr" class="btn back-btn">Back</a>
         </div>
@@ -324,7 +344,7 @@
             <div class="contact-grid">
                 <div class="contact-info">
                     <p><strong>Address:</strong> Aurangabad, Ghazipur, Uttar Pradesh, India</p>
-                    <p><strong>Email:</strong> <a href="mailto:campus@freshertalk.in">campus@freshertalk.in</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:campus@freshtalk.in">campus@freshtalk.in</a></p>
                     <p><strong>Contact:</strong> +91-95350 39501</p>
                 </div>
                 <form>
@@ -339,13 +359,31 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>© 2023 FresherTalk Digital Solutions. All rights reserved.</p>
-            <div class="social-media">
-                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <div class="container footer-grid">
+            <div class="footer-column">
+                <p><strong>Registered Address:</strong></p>
+                <p>Aurangabad, Ghazipur, 233001, Uttar Pradesh, India</p>
             </div>
+            <div class="footer-column">
+                <p><strong>Registration Info:</strong></p>
+                <p>Registration No.: UPSA66715491 | MSME URN: UDYAM-UP-30-0037331</p>
+                <p>GSTIN: 09BMEPT8758F1ZD</p>
+                <p>Recognized by AICTE, New Delhi for offering internships</p>
+            </div>
+            <div class="footer-column">
+                <p><strong>Contact Us:</strong></p>
+                <p><a href="mailto:campus@freshtalk.in">campus@freshtalk.in</a></p>
+                <p>+91-95350 39501</p>
+                <p><a href="https://freshtalk.in" target="_blank">https://freshtalk.in</a></p>
+                <div class="social-media">
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 FresherTalk Digital Solutions. All Rights Reserved.</p>
         </div>
     </footer>
 
