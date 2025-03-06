@@ -12,29 +12,9 @@ const heroSlider = new Swiper(".hero-slider", {
   },
 });
 
-const trainingSlider = new Swiper(".training-slider", {
-  slidesPerView: 1,
-  spaceBetween: 15,
-  loop: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 20,
-    },
-  },
-});
-
 const internshipSlider = new Swiper(".internship-slider", {
   slidesPerView: 1,
-  spaceBetween: 15,
+  spaceBetween: 20,
   loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
@@ -47,14 +27,14 @@ const internshipSlider = new Swiper(".internship-slider", {
   breakpoints: {
     768: {
       slidesPerView: 3,
-      spaceBetween: 20,
+      spaceBetween: 30,
     },
   },
 });
 
-const placementSlider = new Swiper(".placement-slider", {
+const teamSlider = new Swiper(".team-slider", {
   slidesPerView: 1,
-  spaceBetween: 15,
+  spaceBetween: 20,
   loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
@@ -67,34 +47,14 @@ const placementSlider = new Swiper(".placement-slider", {
   breakpoints: {
     768: {
       slidesPerView: 3,
-      spaceBetween: 20,
-    },
-  },
-});
-
-const csrSlider = new Swiper(".csr-slider", {
-  slidesPerView: 1,
-  spaceBetween: 15,
-  loop: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 20,
+      spaceBetween: 30,
     },
   },
 });
 
 const testimonialSlider = new Swiper(".testimonial-slider", {
   slidesPerView: 1,
-  spaceBetween: 15,
+  spaceBetween: 20,
   loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
@@ -107,7 +67,27 @@ const testimonialSlider = new Swiper(".testimonial-slider", {
   breakpoints: {
     768: {
       slidesPerView: 2,
-      spaceBetween: 20,
+      spaceBetween: 30,
+    },
+  },
+});
+
+const workshopSlider = new Swiper(".workshop-slider", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 30,
     },
   },
 });
@@ -197,11 +177,11 @@ document.querySelectorAll(".know-more").forEach((button) => {
 document.querySelectorAll(".explore-more").forEach((button) => {
   button.addEventListener("click", () => {
     const target = button.getAttribute("data-target");
-    document.querySelector(`#${target}`).style.display = "block";
-    window.scrollTo({
-      top: document.querySelector(`#${target}`).offsetTop - 50,
-      behavior: "smooth",
-    });
+    const section = document.querySelector(`#${target}`);
+    if (section.style.display === "none" || !section.style.display) {
+      section.style.display = "block";
+      window.scrollTo({ top: section.offsetTop - 50, behavior: "smooth" });
+    }
   });
 });
 
@@ -274,6 +254,18 @@ gsap.utils.toArray(".btn").forEach((btn) => {
   });
 });
 
+// Scroll to Top/Bottom Functionality
+const scrollTopBtn = document.querySelector(".scroll-top-btn");
+const scrollBottomBtn = document.querySelector(".scroll-bottom-btn");
+
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+scrollBottomBtn.addEventListener("click", () => {
+  window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+});
+
 // Background Animation
 const canvas = document.getElementById("background-canvas");
 const ctx = canvas.getContext("2d");
@@ -282,13 +274,13 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const particlesArray = [];
-const numberOfParticles = 30;
+const numberOfParticles = 50;
 
 class Particle {
   constructor() {
     this.x = Math.random() * canvas.width;
     this.y = Math.random() * canvas.height;
-    this.size = Math.random() * 2 + 1;
+    this.size = Math.random() * 3 + 1;
     this.speedX = Math.random() * 1 - 0.5;
     this.speedY = Math.random() * 1 - 0.5;
   }
