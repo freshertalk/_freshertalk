@@ -797,7 +797,8 @@ footer {
     }
 
     .slide-content h2 {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
+        color: white;
     }
 
     .hero-text h1 {
@@ -1214,140 +1215,139 @@ footer {
         font-size: 20px;
     }
 
-/* Certificate Verification Section Styles */
-#certificate-verification {
-    background: linear-gradient(135deg, #1a3c34, #1e4b3f);
-    padding: 50px 20px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    margin: 40px 0;
-}
+    /* Certificate Verification Section Styles */
+    #certificate-verification {
+        background: linear-gradient(135deg, #1a3c34, #1e4b3f);
+        padding: 50px 20px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        margin: 40px 0;
+    }
 
-#certificate-verification h2 {
-    color: #fff;
-    font-size: 32px;
-    margin-bottom: 30px;
-}
+    #certificate-verification h2 {
+        color: #fff;
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
 
-#certificate-verification h2::after {
-    background-color: #f7c948;
-}
+    #certificate-verification h2::after {
+        background-color: #f7c948;
+    }
 
-.certificate-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-}
+    .certificate-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
 
-.certificate-image {
-    flex: 1;
-    min-width: 300px;
-    max-width: 50%;
-}
+    .certificate-image {
+        flex: 1;
+        min-width: 300px;
+        max-width: 50%;
+    }
 
-.certificate-image img {
-    width: 100%;
-    height: auto;
-    max-height: 400px; /* Set a maximum height to prevent overflow */
-    object-fit: contain; /* Ensures the image fits without distortion */
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    transition: transform 0.5s ease;
-}
+    .certificate-image img {
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+        /* Set a maximum height to prevent overflow */
+        object-fit: contain;
+        /* Ensures the image fits without distortion */
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        transition: transform 0.5s ease;
+    }
 
-.certificate-image img:hover {
-    transform: scale(1.05);
-}
+    .certificate-image img:hover {
+        transform: scale(1.05);
+    }
 
-.certificate-form {
-    flex: 1;
-    min-width: 300px;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    text-align: center;
-}
+    .certificate-form {
+        flex: 1;
+        min-width: 300px;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        text-align: center;
+    }
 
-.certificate-form h3 {
-    color: #f7c948;
-    font-size: 24px;
-    margin-bottom: 15px;
-    position: relative;
-}
+    .certificate-form h3 {
+        color: #f7c948;
+        font-size: 24px;
+        margin-bottom: 15px;
+        position: relative;
+    }
 
-.certificate-form h3::after {
-    content: '';
-    display: block;
-    width: 40px;
-    height: 2px;
-    background-color: #e0b532;
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-}
+    .certificate-form h3::after {
+        content: '';
+        display: block;
+        width: 40px;
+        height: 2px;
+        background-color: #e0b532;
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
-.certificate-form p {
-    color: #d3d3d3;
-    font-size: 16px;
-    margin-bottom: 20px;
-}
+    .certificate-form p {
+        color: #d3d3d3;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
 
-.certificate-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
+    .certificate-form form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
 
-.certificate-form input {
-    padding: 12px 15px;
-    border: 2px solid rgba(247, 201, 72, 0.3);
-    border-radius: 25px;
-    background: rgba(255, 255, 255, 0.05);
-    color: #fff;
-    font-size: 16px;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
+    .certificate-form input {
+        padding: 12px 15px;
+        border: 2px solid rgba(247, 201, 72, 0.3);
+        border-radius: 25px;
+        background: rgba(255, 255, 255, 0.05);
+        color: #fff;
+        font-size: 16px;
+        outline: none;
+        transition: border-color 0.3s ease;
+    }
 
-.certificate-form input:focus {
-    border-color: #f7c948;
-}
+    .certificate-form input:focus {
+        border-color: #f7c948;
+    }
 
-.verify-btn {
-    background: linear-gradient(45deg, #f7c948, #e0b532);
-    color: #fff;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 25px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    .verify-btn {
+        background: linear-gradient(45deg, #f7c948, #e0b532);
+        color: #fff;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 25px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.verify-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(247, 201, 72, 0.6);
-}
+    .verify-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(247, 201, 72, 0.6);
+    }
 
-.verification-result {
-    margin-top: 20px;
-}
+    .verification-result {
+        margin-top: 20px;
+    }
 
-#verification-message {
-    color: #d3d3d3;
-    font-size: 14px;
-    padding: 10px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.05);
-}
-
-
-
+    #verification-message {
+        color: #d3d3d3;
+        font-size: 14px;
+        padding: 10px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.05);
+    }
 
 }
