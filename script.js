@@ -1,5 +1,5 @@
-// Initialize Swiper Slider
-const swiper = new Swiper(".swiper-container", {
+// Initialize Swiper Sliders
+const heroSlider = new Swiper(".hero-slider", {
   effect: "fade",
   loop: true,
   autoplay: {
@@ -9,6 +9,106 @@ const swiper = new Swiper(".swiper-container", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+  },
+});
+
+const trainingSlider = new Swiper(".training-slider", {
+  slidesPerView: 1,
+  spaceBetween: 15,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+  },
+});
+
+const internshipSlider = new Swiper(".internship-slider", {
+  slidesPerView: 1,
+  spaceBetween: 15,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+  },
+});
+
+const placementSlider = new Swiper(".placement-slider", {
+  slidesPerView: 1,
+  spaceBetween: 15,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+  },
+});
+
+const csrSlider = new Swiper(".csr-slider", {
+  slidesPerView: 1,
+  spaceBetween: 15,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+  },
+});
+
+const testimonialSlider = new Swiper(".testimonial-slider", {
+  slidesPerView: 1,
+  spaceBetween: 15,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
   },
 });
 
@@ -132,6 +232,25 @@ document.querySelectorAll(".back-btn").forEach((button) => {
       top: document.querySelector(href).offsetTop - 50,
       behavior: "smooth",
     });
+  });
+});
+
+// FAQ Expand/Collapse Functionality
+document.querySelectorAll(".faq-button").forEach((button) => {
+  button.addEventListener("click", () => {
+    const content = button.nextElementSibling;
+    const isActive = content.style.display === "block";
+    document
+      .querySelectorAll(".faq-content")
+      .forEach((c) => (c.style.display = "none"));
+    document
+      .querySelectorAll(".faq-button")
+      .forEach((b) => b.classList.remove("active"));
+    if (!isActive) {
+      content.style.display = "block";
+      button.classList.add("active");
+      gsap.from(content, { height: 0, opacity: 0, duration: 0.5 });
+    }
   });
 });
 

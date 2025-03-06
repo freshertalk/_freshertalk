@@ -29,7 +29,7 @@ header {
     top: 0;
     z-index: 1000;
     padding: 10px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 nav {
@@ -77,7 +77,8 @@ nav {
 .nav-link {
     color: #d3d3d3;
     text-decoration: none;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
+    /* Smaller font size for header tabs */
     text-transform: uppercase;
     letter-spacing: 0.5px;
     padding: 10px 20px;
@@ -104,7 +105,7 @@ nav {
     overflow: hidden;
 }
 
-.swiper-container {
+.hero-slider {
     width: 100%;
     height: 100%;
 }
@@ -127,7 +128,6 @@ nav {
     transform: translate(-50%, -50%);
     text-align: center;
     color: #d3d3d3;
-    /* Matches header text color */
 }
 
 .slide-content h2 {
@@ -144,9 +144,9 @@ nav {
     text-align: center;
     color: #1a2e2e;
     padding: 15px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .hero-text h1 {
@@ -174,6 +174,7 @@ nav {
     padding: 8px;
     border-radius: 50%;
     margin-bottom: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .feature-item p {
@@ -181,6 +182,7 @@ nav {
     color: #6e6e73;
 }
 
+/* Material UI-Inspired Button */
 .btn {
     display: inline-block;
     background: #d4a017;
@@ -225,15 +227,15 @@ nav {
     padding: 40px 0;
     text-align: center;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 12px;
     margin: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .section:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 h2 {
@@ -241,30 +243,56 @@ h2 {
     font-weight: 600;
     margin-bottom: 15px;
     color: #1a2e2e;
+    position: relative;
 }
 
-/* Course Grid */
-.course-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-    margin-top: 15px;
+h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: #d4a017;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.course-card {
+/* Training Programs Slider */
+.training-slider,
+.internship-slider,
+.placement-slider,
+.csr-slider,
+.testimonial-slider {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.course-card,
+.internship-card,
+.placement-detail-card,
+.csr-card,
+.testimonial-card {
     background: #fff;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
 }
 
-.course-card:hover {
+.course-card:hover,
+.internship-card:hover,
+.placement-detail-card:hover,
+.csr-card:hover,
+.testimonial-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.course-card img {
+.course-card img,
+.internship-card img,
+.placement-detail-card img,
+.csr-card img,
+.testimonial-card img {
     width: 100%;
     height: 120px;
     object-fit: cover;
@@ -272,13 +300,21 @@ h2 {
     margin-bottom: 8px;
 }
 
-.course-card h3 {
+.course-card h3,
+.internship-card h3,
+.placement-detail-card h3,
+.csr-card h3,
+.testimonial-card h3 {
     font-size: 1.1rem;
     margin-bottom: 5px;
     color: #1a2e2e;
 }
 
-.course-card p {
+.course-card p,
+.internship-card p,
+.placement-detail-card p,
+.csr-card p,
+.testimonial-card p {
     color: #6e6e73;
     margin: 3px 0;
     font-size: 0.85rem;
@@ -307,135 +343,7 @@ h2 {
     background: #5a5a5e;
 }
 
-/* Internship Grid */
-.internship-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.internship-card {
-    background: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-}
-
-.internship-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.internship-card img {
-    width: 100%;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 8px;
-}
-
-.internship-card h3 {
-    font-size: 1rem;
-    color: #1a2e2e;
-}
-
-.internship-details {
-    margin-top: 15px;
-    text-align: center;
-}
-
-.internship-details p {
-    color: #6e6e73;
-    margin: 3px 0;
-    font-size: 0.85rem;
-}
-
-/* Placement Grid */
-.placement-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.placement-card {
-    background: #f5f5f7;
-    padding: 10px;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-}
-
-.placement-card:hover {
-    background: #fff;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-.placement-card h3 {
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-    color: #1a2e2e;
-}
-
-.placement-card p {
-    color: #6e6e73;
-    font-size: 0.85rem;
-}
-
-/* Placement and CSR Details */
-.placement-detail-grid,
-.csr-grid,
-.csr-detail-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.placement-detail-card,
-.csr-card,
-.csr-detail-card {
-    background: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.placement-detail-card:hover,
-.csr-card:hover,
-.csr-detail-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.placement-detail-card img,
-.csr-card img,
-.csr-detail-card img {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 8px;
-}
-
-.placement-detail-card h3,
-.csr-card h3,
-.csr-detail-card h3 {
-    font-size: 1.1rem;
-    color: #1a2e2e;
-}
-
-.placement-detail-card p,
-.csr-card p,
-.csr-detail-card p {
-    color: #6e6e73;
-    font-size: 0.85rem;
-}
-
+/* CSR Details */
 .csr-image-large img {
     width: 100%;
     height: 200px;
@@ -475,34 +383,12 @@ h2 {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Testimonial Grid */
-.testimonial-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.testimonial-card {
-    background: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    text-align: center;
-}
-
+/* Testimonial Card */
 .testimonial-card img {
     width: 60px;
     height: 60px;
     border-radius: 50%;
     margin-bottom: 8px;
-}
-
-.testimonial-card p {
-    font-style: italic;
-    color: #6e6e73;
-    margin-bottom: 8px;
-    font-size: 0.85rem;
 }
 
 .testimonial-card footer {
@@ -511,33 +397,59 @@ h2 {
     font-size: 0.9rem;
 }
 
-/* Accordion */
-.accordion-item {
-    margin-bottom: 8px;
+/* FAQ Section */
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 15px;
 }
 
-.accordion-button {
+.faq-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.faq-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.faq-button {
     background: #f5f5f7;
     color: #1d1d1f;
-    padding: 10px;
+    padding: 12px;
     width: 100%;
     text-align: left;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     font-size: 0.9rem;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     transition: background 0.3s ease;
 }
 
-.accordion-button:hover {
+.faq-button:hover {
     background: #e5e5ea;
 }
 
-.accordion-content {
+.faq-button i {
+    transition: transform 0.3s ease;
+}
+
+.faq-button.active i {
+    transform: rotate(180deg);
+}
+
+.faq-content {
     display: none;
-    padding: 10px;
+    padding: 12px;
     background: #fff;
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 12px 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
@@ -572,13 +484,14 @@ form textarea {
     border: 1px solid #d1d1d6;
     border-radius: 8px;
     font-size: 0.85rem;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 form input:focus,
 form textarea:focus {
     border-color: #d4a017;
     outline: none;
+    box-shadow: 0 0 5px rgba(212, 160, 23, 0.3);
 }
 
 form textarea {
@@ -696,16 +609,15 @@ footer {
         gap: 30px;
     }
 
-    .course-grid,
-    .internship-grid,
-    .placement-grid,
-    .csr-grid,
-    .placement-detail-grid,
-    .csr-detail-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    .training-slider .swiper-slide,
+    .internship-slider .swiper-slide,
+    .placement-slider .swiper-slide,
+    .csr-slider .swiper-slide,
+    .testimonial-slider .swiper-slide {
+        width: 300px;
     }
 
-    .testimonial-grid {
+    .faq-grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
@@ -717,6 +629,7 @@ footer {
         grid-template-columns: repeat(3, 1fr);
         text-align: left;
     }
+
     .footer-column:last-child {
         text-align: right;
     }
