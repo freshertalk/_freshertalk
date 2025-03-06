@@ -14,14 +14,13 @@ body {
     position: relative;
 }
 
-/* Mobile-First Approach */
 .container {
     width: 100%;
     margin: 0 auto;
     padding: 0 15px;
 }
 
-/* Header */
+/* Header and Navigation */
 header {
     background: #1a2e2e;
     position: fixed;
@@ -118,7 +117,7 @@ nav {
     box-shadow: 0 6px 15px rgba(212, 160, 23, 0.4);
 }
 
-/* Hero Section with Slider */
+/* Hero Section */
 .hero {
     margin-top: 50px;
     height: calc(100vh - 50px);
@@ -214,7 +213,7 @@ nav {
     text-align: justify;
 }
 
-/* Material UI-Inspired Button */
+/* Button Styles */
 .btn {
     display: inline-block;
     background: linear-gradient(45deg, #d4a017, #f4c430);
@@ -259,7 +258,7 @@ nav {
     margin: 20px auto;
 }
 
-/* Section Styling */
+/* General Section Styles */
 .section {
     padding: 50px 0;
     text-align: center;
@@ -296,12 +295,10 @@ h3::after {
     transform: translateX(-50%);
 }
 
-/* Training Programs */
-.training-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    margin-top: 20px;
+/* Training Programs Slider */
+.training-slider {
+    width: 100%;
+    padding: 20px 0;
 }
 
 .course-card {
@@ -310,6 +307,8 @@ h3::after {
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
+    width: 100%;
+    max-width: 300px;
 }
 
 .course-card:hover {
@@ -362,41 +361,16 @@ h3::after {
     transform: translateY(-2px);
 }
 
-/* Internship Programs Slider */
+/* Internship Programs Slider (Reuse course-card styles) */
 .internship-slider {
     width: 100%;
     padding: 20px 0;
 }
 
-.internship-card {
-    background: #fff;
-    padding: 15px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
+/* Placement Support Section */
+.placement-slider {
     width: 100%;
-    max-width: 300px;
-}
-
-.internship-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.internship-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-/* Placement Support */
-.placement-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    margin-top: 20px;
+    padding: 20px 0;
 }
 
 .placement-card {
@@ -432,7 +406,7 @@ h3::after {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* CSR Activity */
+/* CSR Activity Section */
 .csr-slider {
     width: 100%;
     padding: 20px 0;
@@ -469,29 +443,27 @@ h3::after {
     border-radius: 10px;
 }
 
-/* Team Card */
-.team-card {
-    text-align: center;
+/* Success Stories Section */
+.testimonial-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
 }
 
-.team-card img {
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card img {
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     margin-bottom: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.team-card a {
-    color: #0077b5;
-    font-size: 1.5rem;
-    margin-top: 10px;
-    display: block;
-}
-
-.team-card a:hover {
-    color: #005f91;
-}
-
-/* Testimonial Card */
 .testimonial-info {
     background: #1a2e2e;
     color: #d3d3d3;
@@ -505,7 +477,7 @@ h3::after {
     font-weight: 600;
 }
 
-/* Certificate Verification */
+/* Certificate Verification Section */
 .certificate-image {
     margin: 20px auto;
     display: block;
@@ -569,7 +541,7 @@ h3::after {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* Contact Grid */
+/* Contact Us Section */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -697,7 +669,7 @@ footer {
     box-shadow: 0 6px 15px rgba(212, 160, 23, 0.4);
 }
 
-.page-counter {
+.visitor-counter {
     background: rgba(255, 255, 255, 0.1);
     padding: 5px 10px;
     border-radius: 15px;
@@ -708,7 +680,7 @@ footer {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Background Animation */
+/* Background Canvas */
 #background-canvas {
     position: fixed;
     top: 0;
@@ -719,7 +691,7 @@ footer {
     opacity: 0.1;
 }
 
-/* Desktop Styles */
+/* Responsive Design (Desktop) */
 @media (min-width: 768px) {
     .container {
         max-width: 1200px;
@@ -767,11 +739,13 @@ footer {
         gap: 30px;
     }
 
-    .training-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    .training-slider .swiper-slide,
+    .internship-slider .swiper-slide,
+    .placement-slider .swiper-slide,
+    .csr-slider .swiper-slide {
+        width: 300px;
     }
 
-    .placement-grid,
     .placement-detail-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
@@ -800,4 +774,59 @@ footer {
         right: 20px;
         transform: none;
     }
+
+    /* Team Slider Styles */
+.team-slider {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.team-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.team-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.team-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #1a2e2e;
+}
+
+.team-card p {
+    color: #6e6e73;
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.team-card a {
+    color: #d4a017;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* Swiper Navigation and Pagination */
+.swiper-button-next, .swiper-button-prev {
+    color: #d4a017;
+}
+
+.swiper-pagination-bullet-active {
+    background: #d4a017;
+}
 }
