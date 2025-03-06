@@ -971,6 +971,7 @@ h2::after {
     background-color: #e0b532;
 } */
 
+
 /* Footer Styles */
 footer {
     background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
@@ -1007,7 +1008,7 @@ footer {
 
 .footer-column h3 {
     color: #fff;
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 20px;
     border-bottom: 3px solid #f7c948;
     padding-bottom: 10px;
@@ -1033,9 +1034,9 @@ footer {
 }
 
 .footer-column p {
-    font-size: 16px;
+    font-size: 14px;
     margin: 15px 0;
-    line-height: 1.8;
+    line-height: 1.6;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -1044,7 +1045,7 @@ footer {
 
 .footer-column p i {
     margin-right: 15px;
-    font-size: 18px;
+    font-size: 16px;
     color: #f7c948;
 }
 
@@ -1127,15 +1128,14 @@ footer {
 
 .footer-bottom {
     margin-top: 30px;
-    padding-top: 20px;
+    padding-top: 15px;
     border-top: 1px solid rgba(255, 255, 255, 0.15);
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
-    font-size: 14px;
+    gap: 20px;
     background: rgba(0, 0, 0, 0.3);
-    padding: 15px 25px;
+    padding: 10px 25px;
     border-radius: 15px;
     max-width: 1200px;
     margin: 0 auto;
@@ -1146,9 +1146,14 @@ footer {
     text-align: center;
 }
 
+.small-text {
+    font-size: 11px;
+    line-height: 1.4;
+}
+
 .visitor-counter {
     background: rgba(255, 255, 255, 0.15);
-    padding: 10px 20px;
+    padding: 8px 15px;
     border-radius: 25px;
     color: #d3d3d3;
     transition: transform 0.3s ease, background 0.3s ease;
@@ -1158,4 +1163,5 @@ footer {
     transform: scale(1.1);
     background: rgba(247, 201, 72, 0.2);
 }
+
 }
