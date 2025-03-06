@@ -1164,4 +1164,33 @@ footer {
     background: rgba(247, 201, 72, 0.2);
 }
 
+
+.navigation-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header-arrow {
+    background: linear-gradient(45deg, #f7c948, #e0b532);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.header-arrow:hover {
+    transform: scale(1.15);
+    box-shadow: 0 6px 20px rgba(247, 201, 72, 0.6);
+}
+
+.header-arrow span {
+    color: #fff;
+    font-size: 20px;
+}
+
 }
