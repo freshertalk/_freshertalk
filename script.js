@@ -1,7 +1,19 @@
 // Ensure DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
   // Swiper Sliders Initialization
-  // Team Slider Initialization
+  const heroSlider = new Swiper(".hero-slider", {
+    effect: "fade",
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
   const teamSlider = new Swiper(".team-slider", {
     slidesPerView: 1,
     spaceBetween: 20,
