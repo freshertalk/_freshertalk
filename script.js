@@ -330,31 +330,30 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Basic console log to confirm script loading
-console.log("Script loaded successfully");
+  console.log("Script loaded successfully");
 
-// Add event listeners for enroll buttons (example functionality)
-document.querySelectorAll(".enroll-btn").forEach(button => {
+  // Add event listeners for enroll buttons (example functionality)
+  document.querySelectorAll(".enroll-btn").forEach((button) => {
     button.addEventListener("click", () => {
-        // alert("Enroll Now clicked! Redirecting to enrollment page...");
-        console.log("Enroll Now clicked! Redirecting to enrollment page");
-        // Add actual redirection or functionality as needed
+      // alert("Enroll Now clicked! Redirecting to enrollment page...");
+      console.log("Enroll Now clicked! Redirecting to enrollment page");
+      // Add actual redirection or functionality as needed
     });
-});
+  });
 
-// Add scroll functionality to the down arrow button
-document.getElementById("scroll-down-btn").addEventListener("click", () => {
+  // Add scroll functionality to the down arrow button
+  document.getElementById("scroll-down-btn").addEventListener("click", () => {
     window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: "smooth"
+      top: document.body.scrollHeight,
+      behavior: "smooth",
     });
-});
+  });
 
-// Add scroll functionality to the up arrow button
-document.getElementById("scroll-up-btn").addEventListener("click", () => {
+  // Add scroll functionality to the up arrow button
+  document.getElementById("scroll-up-btn").addEventListener("click", () => {
     window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+      top: 0,
+      behavior: "smooth",
     });
-});
-
+  });
 });
