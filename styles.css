@@ -285,6 +285,14 @@ h3 {
     position: relative;
 }
 
+.h3-mob {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: white;
+    position: relative;
+}
+
 h2::after,
 h3::after {
     content: '';
@@ -679,7 +687,7 @@ footer {
 }
 
 .footer-column {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
 }
 
 .footer-column p {
