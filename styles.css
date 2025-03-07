@@ -1388,4 +1388,22 @@ footer {
         margin: 5px 0px;
     }
 
+
+    .original-price {
+        text-decoration: line-through;
+        color: gray;
+        margin-right: 8px;
+    }
+    .discounted-price {
+        font-weight: bold;
+        color: #e63946;
+    }
+    .discount-percentage {
+        background-color: #ffcc00;
+        color: black;
+        padding: 3px 6px;
+        font-size: 14px;
+        border-radius: 5px;
+        margin-left: 10px;
+    }
 }
