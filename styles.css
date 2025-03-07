@@ -1394,10 +1394,12 @@ footer {
         color: gray;
         margin-right: 8px;
     }
+
     .discounted-price {
         font-weight: bold;
         color: #e63946;
     }
+
     .discount-percentage {
         background-color: #ffcc00;
         color: black;
