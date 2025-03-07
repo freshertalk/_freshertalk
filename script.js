@@ -335,7 +335,8 @@ console.log("Script loaded successfully");
 // Add event listeners for enroll buttons (example functionality)
 document.querySelectorAll(".enroll-btn").forEach(button => {
     button.addEventListener("click", () => {
-        alert("Enroll Now clicked! Redirecting to enrollment page...");
+        // alert("Enroll Now clicked! Redirecting to enrollment page...");
+        console.log("Enroll Now clicked! Redirecting to enrollment page");
         // Add actual redirection or functionality as needed
     });
 });

@@ -487,6 +487,7 @@ h3::after {
 .workshop-slider {
     width: 100%;
     margin: 20px 0;
+    overflow: hidden;
 }
 
 .workshop-slider img {
