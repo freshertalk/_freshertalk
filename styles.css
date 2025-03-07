@@ -76,8 +76,8 @@ nav {
 }
 
 .nav-link {
-    color: #d3d3d3;
-    text-decoration: none;
+    color: white;
+    text-decoration: solid;
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -218,7 +218,7 @@ nav {
 /* Material UI-Inspired Button */
 .btn {
     display: inline-block;
-    background: linear-gradient(45deg, #d4a017, #f4c430);
+    background: linear-gradient(45deg, #090909, #090909);
     color: #fff;
     padding: 10px 20px;
     border-radius: 25px;
@@ -664,7 +664,7 @@ form button:hover {
 
 /* Footer */
 footer {
-    background: #1a2e2e;
+    background: #090909;
     color: #d3d3d3;
     padding: 20px 0;
     text-align: center;
@@ -768,6 +768,10 @@ footer {
 .swiper-button-next,
 .swiper-button-prev {
     color: #d4a017;
+}
+
+.swiper-pagination-bullet {
+    background: white;
 }
 
 .swiper-pagination-bullet-active {
@@ -877,7 +881,7 @@ footer {
 
     /* Header Styles */
     header {
-        background: linear-gradient(90deg, #1a3c34, #1e4b3f);
+        background: linear-gradient(90deg, #090909, #090909);
         padding: 15px 30px;
         display: flex;
         justify-content: space-between;
@@ -986,10 +990,17 @@ footer {
     }
 
     */
-
     /* Footer Styles */
+    /* footer {
+        background: #090909;
+        color: #d3d3d3;
+        padding: 20px 0;
+        text-align: center;
+        position: relative;
+    } */
+
     footer {
-        background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+        background: liner-gradient(135deg, #1a1a1a, #2a2a2a);
         color: #d3d3d3;
         padding: 40px 0;
         text-align: center;
@@ -1023,7 +1034,7 @@ footer {
 
     .footer-column h3 {
         color: #fff;
-        font-size: 20px;
+        font-size: 14px;
         margin-bottom: 20px;
         border-bottom: 3px solid #f7c948;
         padding-bottom: 10px;
@@ -1049,7 +1060,7 @@ footer {
     }
 
     .footer-column p {
-        font-size: 14px;
+        font-size: 11px;
         margin: 15px 0;
         line-height: 1.6;
         display: flex;
