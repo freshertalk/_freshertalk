@@ -310,6 +310,7 @@ h3::after {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
     text-align: center;
+    /* overflow: hidden; */
 }
 
 .team-card:hover {
@@ -322,18 +323,21 @@ h3::after {
     height: 100px;
     border-radius: 50%;
     margin-bottom: 10px;
+    /* overflow: hidden; */
 }
 
 .team-card h4 {
     font-size: 1.2rem;
     margin-bottom: 5px;
     color: #1a2e2e;
+    /* overflow: hidden; */
 }
 
 .team-card p {
     color: #6e6e73;
     margin: 5px 0;
     font-size: 0.9rem;
+    /* overflow: hidden; */
 }
 
 .team-card a {
@@ -341,12 +345,14 @@ h3::after {
     font-size: 1.5rem;
     margin-top: 10px;
     display: inline-block;
+    /* overflow: hidden; */
 }
 
 /* Training Programs Slider */
 .training-slider {
     width: 100%;
     padding: 20px 0;
+    overflow: hidden;
 }
 
 .course-card {
@@ -413,12 +419,14 @@ h3::after {
 .internship-slider {
     width: 100%;
     padding: 20px 0;
+    overflow: hidden;
 }
 
 /* Placement Support Section */
 .placement-slider {
     width: 100%;
     padding: 20px 0;
+    overflow: hidden;
 }
 
 .placement-card {
@@ -458,6 +466,7 @@ h3::after {
 .csr-slider {
     width: 100%;
     padding: 20px 0;
+    overflow: hidden;
 }
 
 .csr-card {
@@ -498,6 +507,7 @@ h3::after {
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
+    /* overflow: hidden; */
 }
 
 .testimonial-card:hover {
