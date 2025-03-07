@@ -19,6 +19,10 @@ body {
     width: 100%;
     margin: 0 auto;
     padding: 0 15px;
+
+    color: rgb(110, 110, 115);
+    font-size: 0.9rem;
+    /* margin: 5px 0px; */
 }
 
 /* Header */
@@ -70,7 +74,7 @@ nav {
     top: 50px;
     left: 0;
     width: 100%;
-    background: #1a2e2e;
+    background: #090909;
     padding: 15px 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
@@ -281,7 +285,7 @@ h3 {
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 20px;
-    color: #1a2e2e;
+    color: #090909;
     position: relative;
 }
 
@@ -533,8 +537,8 @@ h3::after {
 }
 
 .testimonial-info {
-    background: #1a2e2e;
-    color: #d3d3d3;
+    background: #090909;
+    color: white;
     padding: 10px;
     border-radius: 10px;
     margin-top: 10px;
@@ -624,7 +628,7 @@ h3::after {
 }
 
 .contact-info a {
-    color: #d4a017;
+    color: #090909;
     text-decoration: none;
 }
 
@@ -917,7 +921,7 @@ footer {
 
     h2 {
         text-align: center;
-        color: #1a3c34;
+        color: #090909;
         font-size: 28px;
         margin-bottom: 20px;
         position: relative;
@@ -1050,6 +1054,7 @@ footer {
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 1px;
+        text-align: center;
     }
 
     .footer-column h3::after {
@@ -1375,6 +1380,12 @@ footer {
         padding: 10px;
         border-radius: 10px;
         background: rgba(255, 255, 255, 0.05);
+    }
+
+    .mobtxt{
+        color: rgb(110, 110, 115);
+        font-size: 0.9rem;
+        margin: 5px 0px;
     }
 
 }
