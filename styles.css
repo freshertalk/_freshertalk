@@ -493,7 +493,8 @@ h3::after {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
     width: 100%;
-    max-width: 300px;
+    /* max-width: 300px; */
+    max-width: auto;
 }
 
 .csr-card:hover {
