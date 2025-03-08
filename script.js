@@ -357,13 +357,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-
-  // close section: Vinay 
+  // close section: Vinay
   function closeSection() {
     document.getElementById("teri-pg").style.display = "none";
     document.getElementById("dym-wo").style.display = "none";
     document.getElementById("unlock-workshop").style.display = "none";
-}
-
-
+  }
 });
