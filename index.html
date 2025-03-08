@@ -680,7 +680,7 @@
                             <img src="img/teri_3.jpg"
                                 alt="Career Planning: Unlocking Internship Benefits And Strategies For Job Success">
                             <h3>Unlocking Internship Benefits And Strategies For Job Success</h3>
-                            <button class="btn explore-more" data-target="csr-rural">Explore More</button>
+                            <button class="btn explore-more" data-target="unlock-workshop">Explore More</button>
                         </div>
                     </div>
 
@@ -765,7 +765,8 @@
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
             </div>
-            <a href="#csr" class="btn back-btn">Back</a>
+            <!-- <a href="#csr" class="btn back-btn">Back</a> -->
+            <a href="#csr" onclick="closeSection()" class="btn back-btn">Close</a>
         </div>
     </section>
 
@@ -803,12 +804,12 @@
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
             </div>
-            <a href="#csr" class="btn back-btn">Back</a>
+            <a href="#csr" onclick="closeSection()" class="btn back-btn">Close</a>
         </div>
     </section>
 
     <!-- Career Planning: Unlocking Internship Benefits And Strategies For Job Success -->
-    <section id="csr-rural" class="section animate-section csr-details" style="display: none;">
+    <section id="unlock-workshop" class="section animate-section csr-details" style="display: none;">
         <div class="container">
             <h2>Workshop on "Career Planning: Unlocking Internship Benefits and Strategies for Job Success"</h2>
             <p><strong>Date:</strong> December 29, 2024</p>
@@ -842,137 +843,8 @@
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
             </div>
-            <a href="#csr" class="btn back-btn">Back</a>
-        </div>
-    </section>
-
-    <!-- Women in Tech Details -->
-    <section id="csr-women" class="section animate-section csr-details" style="display: none;">
-        <div class="container">
-            <h2>Women in Tech</h2>
-            <p><strong>Date:</strong> March 10, 2025</p>
-            <p style="text-align: justify;"><strong>Description:</strong> Empowering women through tech training and
-                mentorship programs to promote gender equality in the industry.</p>
-            <div class="swiper-container workshop-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Women 1">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Women 2">
-                    </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-            </div>
-            <a href="#csr" class="btn back-btn">Back</a>
-        </div>
-    </section>
-
-    <!-- Digital Literacy Details -->
-    <section id="csr-literacy" class="section animate-section csr-details" style="display: none;">
-        <div class="container">
-            <h2>Digital Literacy</h2>
-            <p><strong>Date:</strong> February 25, 2025</p>
-            <p style="text-align: justify;"><strong>Description:</strong> Teaching basic digital skills to enhance
-                employability and access to online resources.</p>
-            <div class="swiper-container workshop-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Literacy 1">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Literacy 2">
-                    </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-            </div>
-            <a href="#csr" class="btn back-btn">Back</a>
-        </div>
-    </section>
-
-    <!-- Green Tech Details -->
-    <section id="csr-green" class="section animate-section csr-details" style="display: none;">
-        <div class="container">
-            <h2>Green Tech</h2>
-            <p><strong>Date:</strong> March 15, 2025</p>
-            <p style="text-align: justify;"><strong>Description:</strong> Promoting sustainable technology solutions to
-                reduce environmental impact.</p>
-            <div class="swiper-container workshop-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Green 1">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Green 2">
-                    </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-            </div>
-            <a href="#csr" class="btn back-btn">Back</a>
-        </div>
-    </section>
-
-    <!-- Skill Development Details -->
-    <section id="csr-skill" class="section animate-section csr-details" style="display: none;">
-        <div class="container">
-            <h2>Skill Development</h2>
-            <p><strong>Date:</strong> February 10, 2025</p>
-            <p style="text-align: justify;"><strong>Description:</strong> Offering skill-building workshops to enhance
-                employability across various sectors.</p>
-            <div class="swiper-container workshop-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Skill 1">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Skill 2">
-                    </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-            </div>
-            <a href="#csr" class="btn back-btn">Back</a>
-        </div>
-    </section>
-
-    <!-- Community Tech Hubs Details -->
-    <section id="csr-hubs" class="section animate-section csr-details" style="display: none;">
-        <div class="container">
-            <h2>Community Tech Hubs</h2>
-            <p><strong>Date:</strong> March 20, 2025</p>
-            <p style="text-align: justify;"><strong>Description:</strong> Establishing tech hubs in communities for
-                continuous learning and innovation.</p>
-            <div class="swiper-container workshop-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Hubs 1">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Hubs 2">
-                    </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-            </div>
-            <a href="#csr" class="btn back-btn">Back</a>
+            <!-- <a href="#csr" class="btn back-btn">Back</a> -->
+            <a href="#csr" onclick="closeSection()" class="btn back-btn">Close</a>
         </div>
     </section>
 

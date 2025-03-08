@@ -356,4 +356,11 @@ document.addEventListener("DOMContentLoaded", () => {
       behavior: "smooth",
     });
   });
+
+
+  // close section: Vinay 
+  function closeSection() {
+    document.getElementById("csr-ngo").style.display = "none";
+}
+
 });
