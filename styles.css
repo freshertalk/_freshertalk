@@ -487,14 +487,14 @@ h3::after {
 
 .csr-card {
     background: #fff;
-    /* padding: 15px; */
-    padding: 0px;
+    padding: 15px;
+    /* padding: 0px; */
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
     width: 100%;
-    /* max-width: 300px; */
-    max-width: auto;
+    max-width: 300px;
+    /* max-width: auto; */
 }
 
 .csr-card:hover {
@@ -508,7 +508,8 @@ h3::after {
 
 .workshop-slider {
     width: 100%;
-    margin: 20px 0;
+    /* margin: 20px 0; */
+    margin: 0px auto;
     overflow: hidden;
 }
 
