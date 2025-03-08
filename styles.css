@@ -487,7 +487,8 @@ h3::after {
 
 .csr-card {
     background: #fff;
-    padding: 15px;
+    /* padding: 15px; */
+    padding: 0px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
