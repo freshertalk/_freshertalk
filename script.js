@@ -360,7 +360,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // close section: Vinay 
   function closeSection() {
-    document.getElementById("csr-ngo").style.display = "none";
+    document.getElementById("teri-pg").style.display = "none";
+    document.getElementById("dym-wo").style.display = "none";
+    document.getElementById("unlock-workshop").style.display = "none";
 }
+
 
 });
